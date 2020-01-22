@@ -34,12 +34,4 @@ public class PlayerController : MonoBehaviour
             transform.Rotate(0f, 0f, speed * Time.deltaTime * 50f);
         }
     }
-
-    Vector3 ForwardXZ(Vector3 forward) {
-        float f_x = forward.x;
-        float f_z = forward.z;
-        float norm = Mathf.Sqrt(f_x * f_x + f_z * f_z);
-        Vector3 vec = new Vector3(f_x / norm, 0f, f_z / norm);
-        return vec;
-    }
 }
