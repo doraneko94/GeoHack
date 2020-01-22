@@ -25,7 +25,7 @@ zキー：Z軸方向回転
 で実装できますが、そこに適当な数字（10とか50とか）をかけることによって、詳細な速度設定を行っています。<br>
 （適宜変更してみてください）
 
-## EyeCameraController
+## EyeCameraScript
 Cameraが特定のオブジェクトを追尾するためのスクリプトです。
 ```
 public GameObject target
