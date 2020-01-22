@@ -29,9 +29,13 @@ public class EyeCameraScript : MonoBehaviour
     {
         float f_x = forward.x;
         float f_z = forward.z;
+        if (f_z == 0.0) {
+            f_z += 1e-7f;
+        }
         float arg = Mathf.Atan(f_x / f_z) / (2f * Mathf.PI) * 360f;
 
-        if (f_z < 0) arg += 180f;
+        if (f_z < 0 & f_x > 0) arg += 180f;
+        if (f_z < 0 & f_x < 0) arg -= 180f;
 
         return arg;
     }
